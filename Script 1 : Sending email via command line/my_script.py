@@ -72,16 +72,18 @@ def main():
         emails = get_contacts('contacts.txt')
 
         for email in emails:
+            if is_valid_email(email):
+                msg = MIMEMultipart()
 
-            msg = MIMEMultipart()
+                msg['From'] = my_address
+                msg['To'] = email
+                msg['Subject'] = sub
 
-            msg['From'] = my_address
-            msg['To'] = email
-            msg['Subject'] = sub
-
-            msg.attach(MIMEText(message, 'plain'))
-            s.send_message(msg)
-            del msg
+                msg.attach(MIMEText(message, 'plain'))
+                s.send_message(msg)
+                del msg
+            else:
+                print("Invalid email. This will be ignored and message won't be sent.")
 
         s.quit()
 
