@@ -8,3 +8,13 @@ We can't put email and password directly in variables for obvious reasons. So us
 export my_email="email_id@abc.com"
 export my_password="password_sample"
 ```
+
+Access them using the os module
+
+```
+from os import environ
+
+my_email = environ.get('my_email')
+my_password = environ.get('my_password')
+```
+
