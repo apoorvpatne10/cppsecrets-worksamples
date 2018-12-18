@@ -6,5 +6,6 @@ We can't put email and password directly in variables for obvious reasons. So us
 
 `
 export my_email="email_id@abc.com"
+
 export my_password="password_sample"
 `
