@@ -44,6 +44,7 @@ Subject indicates the subject body of an email. File path indicates the path to 
 
 ```
 user@user:~/Desktop$ python my_script.py --email_id "friend_mail@gmail.com" "The subject body" "message.docx"
+Email sent successfully!
 ```
 
 This will send the message to the user with specified email id.
@@ -52,6 +53,8 @@ This will send the message to the user with specified email id.
 
 ```
 user@user:~/Desktop$ python my_script.py "The subject body" "message.docx"
+Email sent!
+Email sent!
 ```
 
-This will send the message to all the email ids specified in the contacts.txt file.
+This will send the message to all the email ids specified in the contacts.txt file. In this case there were only 2 emails.
