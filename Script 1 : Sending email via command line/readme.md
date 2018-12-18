@@ -9,6 +9,8 @@ export my_email="email_id@abc.com"
 export my_password="password_sample"
 ```
 
+These are your account's credentials.
+
 ### Access them using the os module
 
 ```
