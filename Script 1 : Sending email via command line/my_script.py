@@ -67,6 +67,7 @@ def main():
         del msg
         s.quit()
 
+        print('Email sent successfully!')
     else:
         print("Sending emails to all contacts provided in the contacts file")
         emails = get_contacts('contacts.txt')
@@ -82,6 +83,7 @@ def main():
                 msg.attach(MIMEText(message, 'plain'))
                 s.send_message(msg)
                 del msg
+                print('Email sent!')
             else:
                 print("Invalid email. This will be ignored and message won't be sent.")
 
