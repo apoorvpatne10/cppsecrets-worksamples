@@ -42,17 +42,17 @@ def get_contacts(filename):
 
 def main():
 
-    doc_file = docx.Document(file_path) ##
-    paragraphs = doc_file.paragraphs ##
-    message = '' ##
+    doc_file = docx.Document(file_path)
+    paragraphs = doc_file.paragraphs
+    message = ''
 
-    for para in paragraphs: ##
-        message += para.text ##
-        message += '\n' ##
+    for para in paragraphs:
+        message += para.text
+        message += '\n'
 
-    s = smtplib.SMTP('smtp.gmail.com:587') ##
-    s.starttls() ##
-    s.login(my_address, password) ##
+    s = smtplib.SMTP('smtp.gmail.com:587')
+    s.starttls()
+    s.login(my_address, password)
 
     if args.email_id:
 
